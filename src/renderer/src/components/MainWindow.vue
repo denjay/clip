@@ -2,12 +2,10 @@
 import { ref, reactive, onMounted, watch, computed, nextTick, toRaw } from 'vue'
 import hljs from 'highlight.js'
 import 'highlight.js/styles/github.css'
-import { useRouter } from 'vue-router'
 import Settings from './Settings.vue'
 import { useConfigStore } from '../stores/config'
 
 const config = useConfigStore()
-const router = useRouter()
 const searchString = ref('')
 const showSearchInput = ref(false) // 是否显示搜索框
 const deleteConfirmVisible = ref(false) // 清空确认框
@@ -635,7 +633,7 @@ function bodyFocus() {
           </el-icon>
           <el-popover :width="200" trigger="hover" placement="bottom-end" :show-arrow="false">
             <template #reference>
-              <el-icon title="设置(右键打开全部设置)" @click.right="router.push('settings')">
+              <el-icon title="设置">
                 <Setting />
               </el-icon>
             </template>

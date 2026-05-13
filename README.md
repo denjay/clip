@@ -18,12 +18,13 @@ Shortcut: `ctrl+shift+v`
 
 ```bash
 $ npm install
+# When using Linux, you also need to execute this command:
+$ sudo chmod 777 node_modules/clipboard-event/platform/clipboard-event-handler-linux
 ```
 
 ### Development
 
 ```bash
-$ sudo chmod 777 node_modules/clipboard-event/platform/clipboard-event-handler-linux
 $ npm run dev
 ```
 
